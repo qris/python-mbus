@@ -294,6 +294,14 @@ class MBusLib(object):
         self.parse_variable_record.argtypes = [mbus_data_record_p]
         self.parse_variable_record.restype  = mbus_record_p
 
+        self.data_record_unit               = lib.mbus_data_record_unit
+        self.data_record_unit.argtypes      = [mbus_data_record_p]
+        self.data_record_unit.restype       = c_char_p
+
+        self.data_record_value              = lib.mbus_data_record_value
+        self.data_record_value.argtypes     = [mbus_data_record_p]
+        self.data_record_value.restype      = c_char_p
+
         #self.data_fixed_normalize           = lib.mbus_data_fixed_normalize
         #self.data_fixed_normalize.argtypes  = [c_int, c_long, c_char_pp,
         #                                        c_double_p, c_char_pp]
